@@ -1,0 +1,174 @@
+{% load static %}
+<aside class="left-sidebar" data-sidebarbg="skin5">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="pt-4">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-account-plus"></i
+                  ><span class="hide-menu">Add User </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="{% url 'addstaff' %}" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-plus"></i
+                      ><span class="hide-menu">Add Staff</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="{% url 'addstudent' %}" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-plus"></i
+                      ><span class="hide-menu">Add Student</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-account-settings-variant"></i
+                  ><span class="hide-menu">Manage User </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="{% url 'managestaff' %}" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-poll"></i
+                      ><span class="hide-menu">Manage Staff</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="{% url 'managestudent' %}" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-poll"></i
+                      ><span class="hide-menu">Manage Student</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-book-open-page-variant"></i
+                  ><span class="hide-menu">Courses </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="{% url 'addcourse' %}" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-plus"></i
+                      ><span class="hide-menu">Add Course</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-poll"></i
+                      ><span class="hide-menu">Manage Course</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-book-open"></i
+                  ><span class="hide-menu">Subject </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="{% url 'addsubject' %}" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-plus"></i
+                      ><span class="hide-menu">Add Subject</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-poll"></i
+                      ><span class="hide-menu">Mange Subject</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-script"></i
+                  ><span class="hide-menu">Reports</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="form-basic.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-plus-network"></i
+                      ><span class="hide-menu">Attendance</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-cash-multiple"></i
+                      ><span class="hide-menu">Tuition</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-comment-text-outline"></i
+                  ><span class="hide-menu">Feedback</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="form-basic.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-comment-processing-outline"></i
+                      ><span class="hide-menu">Staff Feedback</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-comment-processing-outline"></i
+                      ><span class="hide-menu">Student Feedback</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="me-2 mdi mdi-account-minus"></i
+                  ><span class="hide-menu">Leave</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="form-basic.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-account-alert"></i
+                      ><span class="hide-menu">Staff Leave</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="me-2 mdi mdi-account-alert"></i
+                      ><span class="hide-menu">Student Leave</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>

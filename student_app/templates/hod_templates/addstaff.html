@@ -1,0 +1,76 @@
+{% extends 'hod_templates/base_template.html' %}
+{% load static %}
+{% block custom_css %}
+   <link
+      href="{%  static 'assets/libs/jquery-steps/jquery.steps.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{%  static 'assets/libs/jquery-steps/steps.css' %}" rel="stylesheet" />
+    <link href="{%  static 'assets/dist/css/style.min.css' %}" rel="stylesheet" />
+{% endblock custom_css %}
+{% block page_title %}Add Staff{% endblock page_title %}
+{% block main_content %}
+     <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <form class="form-horizontal" action="/addstaff_save" method="post">
+                    {% csrf_token %}
+                  <div class="card-body">
+                    <h4 class="card-title">Staff Detail</h4>
+                    <div class="form-group row">
+<!--                      <label class="col-sm-3 text-end control-label col-form-label">First Name *</label>-->
+                      <div class="col-sm-12">
+                        <input type="text" class="required form-control" name="first_name" placeholder="First Name *"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+<!--                      <label class="col-sm-3 text-end control-label col-form-label">Last Name *</label>-->
+                      <div class="col-sm-12">
+                        <input type="text" class="required form-control" name="last_name" placeholder="Last Name *"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+<!--                      <label class="col-sm-3 text-end control-label col-form-label">Password *</label>-->
+                      <div class="col-sm-12">
+                        <input type="password" class="required form-control" name="password"  placeholder="Password *"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+<!--                      <label class="col-sm-3 text-end control-label col-form-label">Email *</label>-->
+                      <div class="col-sm-12">
+                        <input type="email" class="required form-control" name="email" placeholder="Email *"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+<!--                      <label  class="col-sm-3 text-end control-label col-form-label">Username *</label>-->
+                      <div class="col-sm-12">
+                        <input type="text" class="required form-control" name="username"  placeholder="Username *"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+<!--                      <label class="col-sm-3 text-end control-label col-form-label">Address *</label>-->
+                      <div class="col-sm-12">
+                        <textarea name="address" class="required form-control" placeholder="Address *"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                     {% if messages %}
+                       <div>
+                         {% for message in messages %}
+                         {% if message.tags == 'error' %}
+                         <div class="alert alert-danger">{{ message }}</div>
+                         {% endif %}
+                         {% if message.tags == 'success' %}
+                         <div class="alert alert-success">{{ message }}</div>
+                         {% endif %}
+                         {% endfor %}
+                       </div>
+                    {% endif %}
+                    </div>
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-primary btn-block">Add staff</button>
+                    </div>
+                </form>
+              </div>
+{% endblock main_content %}

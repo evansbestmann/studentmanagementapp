@@ -1,0 +1,18 @@
+{% extends 'hod_templates/base_template.html' %}
+{% load static %}
+{% block custom_css %}
+   <link
+      href="{%  static 'assets/libs/jquery-steps/jquery.steps.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{%  static 'assets/libs/jquery-steps/steps.css' %}" rel="stylesheet" />
+    <link href="{%  static 'assets/dist/css/style.min.css' %}" rel="stylesheet" />
+{% endblock custom_css %}
+{% block page_title %}Home{% endblock page_title %}
+{% block main_content %}
+     <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+
+              </div>
+{% endblock main_content %}
